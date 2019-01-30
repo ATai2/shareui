@@ -1,5 +1,6 @@
 package com.ppx.shareui;
 
+import org.activiti.spring.boot.JpaProcessEngineAutoConfiguration;
 import org.activiti.spring.boot.SecurityAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +14,7 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class,
         LiquibaseAutoConfiguration.class,
         HibernateJpaAutoConfiguration.class,
+//        JpaProcessEngineAutoConfiguration.class,
 })
 public class ShareuiApplication {
 
