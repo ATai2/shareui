@@ -9,11 +9,13 @@ import org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurity
 import org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
 
 
 /**
  * @author Administrator
  */
+@ComponentScan(basePackages = {"com.ppx.shareui","org.activiti.app"})
 @SpringBootApplication(exclude = {
         SecurityAutoConfiguration.class,
         LiquibaseAutoConfiguration.class,
