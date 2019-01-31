@@ -50,11 +50,16 @@ activitiApp.service('RuntimeAppDefinitionService', ['$http', '$q', '$location', 
             }
 
             var urls = {
-                editor: baseUrl + '/editor/',
-                identity: baseUrl + '/idm/',
-                workflow: baseUrl + '/workflow/',
+                editor: ACTIVITI.CONFIG.editorUrl,
+                identity: ACTIVITI.CONFIG.idmUrl,
+                workflow:ACTIVITI.CONFIG.workflowUrl,
                 admin: 'http://localhost:8080/activiti-admin',
                 analytics: baseUrl + '/analytics/'
+                // editor: baseUrl + '/editor/',
+                // identity: baseUrl + '/idm/',
+                // workflow: baseUrl + '/workflow/',
+                // admin: 'http://localhost:8080/activiti-admin',
+                // analytics: baseUrl + '/analytics/'
             };
 
             var transformAppsResponse = function(value) {

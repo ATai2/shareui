@@ -35,7 +35,7 @@ angular.module('activitiApp').service('IdmService', ['$http', '$q', '$rootScope'
             return httpAsPromise(
                 {
                     method: 'GET',
-                    url: ACTIVITI.CONFIG.contextRoot + '/app/rest/admin/profile'
+                    url: ACTIVITI.CONFIG.contextRoot + '/profile'
                 }
             )
         };
@@ -44,7 +44,7 @@ angular.module('activitiApp').service('IdmService', ['$http', '$q', '$rootScope'
             var deferred = $q.defer();
             $http({
                 method: 'POST',
-                url: ACTIVITI.CONFIG.contextRoot + '/app/rest/admin/profile',
+                url: ACTIVITI.CONFIG.contextRoot + '/profile',
                 data: userData
             }).success(function (response, status, headers, config) {
                 if (successCallback) {

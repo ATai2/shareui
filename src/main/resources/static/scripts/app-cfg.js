@@ -11,7 +11,11 @@ var ACTIVITI = ACTIVITI || {};
 ACTIVITI.CONFIG = {
 	'onPremise' : true,
 	'contextRoot' : '/shareui',
-	'webContextRoot' : '/shareui'
+	'webContextRoot' : '/shareui',
+	'editorUrl' : 'http://localhost:9100/shareui/editor/index.html',
+	'idmUrl' : 'http://localhost:9100/shareui/idm/index.html',
+	'workflowUrl' : 'http://localhost:9100/shareui/workflow/index.html',
+
 };
 /*
  * Copyright 2005-2015 Alfresco Software, Ltd. All rights reserved.
