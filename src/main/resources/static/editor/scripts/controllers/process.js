@@ -39,7 +39,7 @@ angular.module('activitiModeler')
           
           $scope.loadVersions();
 
-          $scope.model.bpmn20DownloadUrl = ACTIVITI.CONFIG.contextRoot + '/app/rest/models/' + $routeParams.modelId +
+          $scope.model.bpmn20DownloadUrl = ACTIVITI.CONFIG.contextRoot + '/models/' + $routeParams.modelId +
     			($routeParams.modelHistoryId == undefined ? '' : '/history/' + $routeParams.modelHistoryId) + '/bpmn20?version=' + Date.now();
 
 

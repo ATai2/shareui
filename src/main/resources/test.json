@@ -1,0 +1,309 @@
+{
+  "resourceId": "9595b493-3ad7-4857-8e75-cc79c799df8c",
+  "properties": {
+    "process_id": "45",
+    "name": "45",
+    "shareuiid": "45",
+    "shareuiname": "88",
+    "documentation": "66",
+    "process_author": "",
+    "process_version": "",
+    "process_namespace": "http://www.activiti.org/processdef",
+    "executionlisteners": "",
+    "eventlisteners": "",
+    "signaldefinitions": "",
+    "messagedefinitions": ""
+  },
+  "stencil": {
+    "id": "BPMNDiagram"
+  },
+  "childShapes": [
+    {
+      "resourceId": "startEvent1",
+      "properties": {
+        "overrideid": "",
+        "name": "",
+        "documentation": "",
+        "executionlisteners": "",
+        "initiator": "",
+        "formkeydefinition": "",
+        "formreference": "",
+        "formproperties": ""
+      },
+      "stencil": {
+        "id": "StartNoneEvent"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-B1A0AC80-0863-4665-93D7-128CAF121216"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 130,
+          "y": 193
+        },
+        "upperLeft": {
+          "x": 100,
+          "y": 163
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-D174F68D-4E38-4436-90F2-F6608677B077",
+      "properties": {
+        "scriptformat": "groovy",
+        "scripttext": "println \"test\"",
+        "overrideid": "",
+        "name": "",
+        "documentation": "",
+        "asynchronousdefinition": "false",
+        "exclusivedefinition": "false",
+        "executionlisteners": "",
+        "multiinstance_type": "None",
+        "multiinstance_cardinality": "",
+        "multiinstance_collection": "",
+        "multiinstance_variable": "",
+        "multiinstance_condition": "",
+        "isforcompensation": "false"
+      },
+      "stencil": {
+        "id": "ScriptTask"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-EEADB991-3AF7-402A-ABA6-8EB269C78B1E"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 295,
+          "y": 218
+        },
+        "upperLeft": {
+          "x": 195,
+          "y": 138
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-536BE067-786A-4D80-BECB-7CCE42A5BF15",
+      "properties": {
+        "overrideid": "",
+        "name": "",
+        "documentation": "",
+        "executionlisteners": ""
+      },
+      "stencil": {
+        "id": "EndNoneEvent"
+      },
+      "childShapes": [],
+      "outgoing": [],
+      "bounds": {
+        "lowerRight": {
+          "x": 490,
+          "y": 194
+        },
+        "upperLeft": {
+          "x": 462,
+          "y": 166
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-B1A0AC80-0863-4665-93D7-128CAF121216",
+      "properties": {
+        "overrideid": "",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": "",
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-D174F68D-4E38-4436-90F2-F6608677B077"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 194.234375,
+          "y": 178
+        },
+        "upperLeft": {
+          "x": 130.21875,
+          "y": 178
+        }
+      },
+      "dockers": [
+        {
+          "x": 15,
+          "y": 15
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-D174F68D-4E38-4436-90F2-F6608677B077"
+      }
+    },
+    {
+      "resourceId": "sid-08844CB3-6DE5-480D-B17D-119F9B22141B",
+      "properties": {
+        "overrideid": "",
+        "name": "",
+        "shareuiid": "44",
+        "shareuiname": "89",
+        "documentation": "",
+        "asynchronousdefinition": "false",
+        "exclusivedefinition": "false",
+        "executionlisteners": "",
+        "multiinstance_type": "None",
+        "multiinstance_cardinality": "",
+        "multiinstance_collection": "",
+        "multiinstance_variable": "",
+        "multiinstance_condition": "",
+        "isforcompensation": "false",
+        "usertaskassignment": "",
+        "formkeydefinition": "",
+        "formreference": "",
+        "duedatedefinition": "",
+        "prioritydefinition": "",
+        "formproperties": "",
+        "tasklisteners": ""
+      },
+      "stencil": {
+        "id": "UserTask"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-B2534D77-7DBB-4066-B71D-608B15E79D77"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 415,
+          "y": 125
+        },
+        "upperLeft": {
+          "x": 315,
+          "y": 45
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-EEADB991-3AF7-402A-ABA6-8EB269C78B1E",
+      "properties": {
+        "overrideid": "",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": "",
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-08844CB3-6DE5-480D-B17D-119F9B22141B"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 314.52208494782474,
+          "y": 138.8796158345642
+        },
+        "upperLeft": {
+          "x": 295.47791505217526,
+          "y": 124.12038416543581
+        }
+      },
+      "dockers": [
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-08844CB3-6DE5-480D-B17D-119F9B22141B"
+      }
+    },
+    {
+      "resourceId": "sid-B2534D77-7DBB-4066-B71D-608B15E79D77",
+      "properties": {
+        "overrideid": "",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": "",
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-536BE067-786A-4D80-BECB-7CCE42A5BF15"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 464.83401046566604,
+          "y": 170.44352247061508
+        },
+        "upperLeft": {
+          "x": 412.15427078433396,
+          "y": 125.35725877938492
+        }
+      },
+      "dockers": [
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 14,
+          "y": 14
+        }
+      ],
+      "target": {
+        "resourceId": "sid-536BE067-786A-4D80-BECB-7CCE42A5BF15"
+      }
+    }
+  ],
+  "bounds": {
+    "lowerRight": {
+      "x": 1200,
+      "y": 1050
+    },
+    "upperLeft": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "stencilset": {
+    "url": "stencilsets/bpmn2.0/bpmn2.0.json",
+    "namespace": "http://b3mn.org/stencilset/bpmn2.0#"
+  },
+  "ssextensions": []
+}

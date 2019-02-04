@@ -14,6 +14,13 @@ import java.util.Set;
 import java.util.function.Consumer;
 
 public class XmlTest {
+    private static void accept(ExtensionAttribute extensionAttribute) {
+        System.out.println(extensionAttribute.getNamespacePrefix());
+        System.out.println(extensionAttribute.getName());
+        System.out.println(extensionAttribute.getNamespace());
+        System.out.println(extensionAttribute.getValue());
+    }
+
     @Test
     public void getExtend(){
         BpmnXMLConverter xmlConverter=new BpmnXMLConverter();
@@ -22,28 +29,17 @@ public class XmlTest {
         BpmnModel bpmnModel = xmlConverter.convertToBpmnModel(inputStreamProvider, true, true);
         Process process = bpmnModel.getProcesses().get(0);
         List<UserTask> flowElementsOfType = process.findFlowElementsOfType(UserTask.class);
-        flowElementsOfType.forEach(new Consumer<UserTask>() {
-            @Override
-            public void accept(UserTask scriptTask) {
-                System.out.println("====================");
-                Map<String, List<ExtensionAttribute>> attributes = scriptTask.getAttributes();
-                Set<Map.Entry<String, List<ExtensionAttribute>>> entries = attributes.entrySet();
-                for (Map.Entry<String, List<ExtensionAttribute>> entry:
-                entries){
-                    System.out.println("dddddddddddddddddddddddddd");
-                    String key = entry.getKey();
-                    System.out.println("key: "+key);
-                    List<ExtensionAttribute> value = entry.getValue();
-                    value.forEach(new Consumer<ExtensionAttribute>() {
-                        @Override
-                        public void accept(ExtensionAttribute extensionAttribute) {
-                            System.out.println(extensionAttribute.getNamespacePrefix());
-                            System.out.println(extensionAttribute.getName());
-                            System.out.println(extensionAttribute.getNamespace());
-                            System.out.println(extensionAttribute.getValue());
-                        }
-                    });
-                }
+        flowElementsOfType.forEach(scriptTask -> {
+            System.out.println("====================");
+            Map<String, List<ExtensionAttribute>> attributes = scriptTask.getAttributes();
+            Set<Map.Entry<String, List<ExtensionAttribute>>> entries = attributes.entrySet();
+            for (Map.Entry<String, List<ExtensionAttribute>> entry:
+            entries){
+                System.out.println("dddddddddddddddddddddddddd");
+                String key = entry.getKey();
+                System.out.println("key: "+key);
+                List<ExtensionAttribute> value = entry.getValue();
+                value.forEach(XmlTest::accept);
             }
         });
 

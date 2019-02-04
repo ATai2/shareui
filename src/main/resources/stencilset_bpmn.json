@@ -1138,6 +1138,8 @@
       "propertyPackages": [
         "overrideidpackage",
         "namepackage",
+        "shareuiidpackage",
+        "shareuinamepackage",
         "documentationpackage",
         "asynchronousdefinitionpackage",
         "exclusivedefinitionpackage",
